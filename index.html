@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yes/No Buttons</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="imageContainer">
+        <h1>ARE YOU A CAT?</h1>
+        <img src="https://i.pinimg.com/236x/4b/bf/3f/4bbf3fda4df412f97e7837f51cee7c0b.jpg" alt="Your Image" >
+        <button id="yesButton" class="Button" onclick="showResult('congo you are a cat')">YES</button>
+        <button id="noButton" class="Button" onclick="moveButton()">NO</button>
+    </div>
+
+    <script>
+        function showResult(result) {
+            alert(result);
+        }
+
+        function moveButton() {
+            // Get window dimensions
+            var windowWidth = window.innerWidth;
+            var windowHeight = window.innerHeight;
+
+            // Get button dimensions
+            var buttonWidth = document.getElementById("noButton").offsetWidth;
+            var buttonHeight = document.getElementById("noButton").offsetHeight;
+
+            // Calculate a random position for the 'NO' button within the screen boundaries
+            var newPositionX = Math.max(0, Math.min(windowWidth - buttonWidth, Math.floor(Math.random() * (windowWidth - buttonWidth))));
+            var newPositionY = Math.max(0, Math.min(windowHeight - buttonHeight, Math.floor(Math.random() * (windowHeight - buttonHeight))));
+
+            // Move the 'NO' button to the new position
+            document.getElementById("noButton").style.left = newPositionX + "px";
+            document.getElementById("noButton").style.top = newPositionY + "px";
+        }
+    </script>
+
+</body>
+</html>
+
+

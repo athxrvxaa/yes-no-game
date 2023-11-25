@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: rgb(223, 194, 250);
+}
+#imageContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+
+}
+#imageContainer img{
+   border-radius: 12px;
+   border: 3px solid black;
+}
+.Button{
+    background-color: rgb(190, 137, 239);
+    color: rgb(163, 84, 238);
+    width: 5rem;
+    height: 2rem;
+    border-radius: 12px;
+    margin-top: 349px; 
+}
+#yesButton{
+    position: absolute;
+    
+    margin-left: 30px;
+}
+#noButton {
+    position: absolute;
+    margin-left: 170px;
+}
